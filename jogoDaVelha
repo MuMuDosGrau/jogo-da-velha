@@ -1,0 +1,29 @@
+programa {
+  funcao inicio() {
+    
+    //jogo da velha
+
+    caracter posicao[9] = {"_", "_", "_", "_", "_", "_", "_", "_", "_"}
+    inteiro i, jogada
+    logico velha = falso
+
+
+
+    enquanto (nao (velha)) {
+
+    para(i=0; i<9; i=i+3) {
+      escreva(posicao[i] , "|" , posicao [i,1] , "|" , posicao[i,2] , "\n")
+    }
+
+    escreva("jogar x jogar (indique uma posição de 0 a 9): ")
+    leia(jogada)
+    posicao[jogada] = "X"
+
+    escreva("jogar O jogar (indique um posiçao de 0 a 9): ")
+    leia(jogada)
+    posicao[jogada] = "O"
+    
+    velha = falso
+   }
+  }
+}
